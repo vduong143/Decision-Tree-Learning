@@ -1,0 +1,263 @@
+For WillWaitProblem.java
+******************
+
+[Alternate, Bar, Fri/Sat, Hungry, Patrons, Price, Raining, Reservation, Type, WaitEstimate] -> WillWait
+[Yes, Some, Yes, French, Yes, No, No, No, $$$, 0-10] -> Yes
+[Yes, Full, No, Thai, Yes, No, No, No, $, 30-60] -> No
+[No, Some, No, Burger, No, No, No, Yes, $, 0-10] -> Yes
+[Yes, Full, No, Thai, Yes, Yes, Yes, No, $, 10-30] -> Yes
+[Yes, Full, Yes, French, No, No, Yes, No, $$$, >60] -> No
+[No, Some, Yes, Italian, Yes, Yes, No, Yes, $$, 0-10] -> Yes
+[No, None, No, Burger, No, Yes, No, Yes, $, 0-10] -> No
+[No, Some, Yes, Thai, Yes, Yes, No, No, $$, 0-10] -> Yes
+[No, Full, No, Burger, No, Yes, Yes, Yes, $, >60] -> No
+[Yes, Full, Yes, Italian, Yes, No, Yes, Yes, $$$, 10-30] -> No
+[No, None, No, Thai, No, No, No, No, $, 0-10] -> No
+[Yes, Full, No, Burger, Yes, No, Yes, Yes, $, 30-60] -> Yes
+Alternate
+  No:
+    Bar
+      No:
+        Fri/Sat
+          No:
+            Hungry
+              No:
+                No
+              Yes:
+                Yes
+          Yes:
+            No
+      Yes:
+        Patrons
+          None:
+            No
+          Some:
+            Yes
+          Full:
+            No
+  Yes:
+    Price
+      $:
+        Raining
+          No:
+            Reservation
+              No:
+                Type
+                  French:
+                    No
+                  Italian:
+                    No
+                  Thai:
+                    No
+                  Burger:
+                    Yes
+              Yes:
+                No
+          Yes:
+            Yes
+      $$:
+        No
+      $$$:
+        WaitEstimate
+          0-10:
+            Yes
+          10-30:
+            No
+          30-60:
+            No
+          >60:
+            No
+Correct: 12/12 (100.00)%
+1/0 Loss: 0
+
+***********************
+
+For DiscreteIrisProblem.java
+***********************
+
+[SepalLength, SepalWidth, PetalLength, PetalWidth] -> Species
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[S, S, S, L] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[MS, S, S, L] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, S] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[S, S, S, L] -> Iris-setosa
+[S, S, S, MS] -> Iris-setosa
+[S, S, S, L] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[MS, S, S, ML] -> Iris-setosa
+[S, S, S, ML] -> Iris-setosa
+[L, ML, ML, ML] -> Iris-versicolor
+[ML, ML, ML, ML] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, S] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, ML] -> Iris-versicolor
+[S, MS, MS, S] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, MS, MS] -> Iris-versicolor
+[S, MS, MS, S] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, MS, ML, S] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, MS, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, MS, ML, MS] -> Iris-versicolor
+[ML, ML, ML, S] -> Iris-versicolor
+[MS, MS, MS, S] -> Iris-versicolor
+[MS, ML, ML, ML] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, S] -> Iris-versicolor
+[ML, MS, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, MS, MS, MS] -> Iris-versicolor
+[MS, MS, MS, S] -> Iris-versicolor
+[MS, MS, MS, S] -> Iris-versicolor
+[MS, MS, MS, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, ML] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, S] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, ML, ML, S] -> Iris-versicolor
+[MS, MS, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[MS, MS, ML, MS] -> Iris-versicolor
+[S, MS, MS, S] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[MS, MS, ML, MS] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[ML, ML, ML, MS] -> Iris-versicolor
+[S, MS, MS, S] -> Iris-versicolor
+[MS, ML, ML, MS] -> Iris-versicolor
+[ML, L, L, ML] -> Iris-virginica
+[MS, L, ML, MS] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[ML, ML, L, MS] -> Iris-virginica
+[ML, L, L, MS] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[S, ML, ML, S] -> Iris-virginica
+[L, ML, L, MS] -> Iris-virginica
+[ML, ML, L, S] -> Iris-virginica
+[L, L, L, ML] -> Iris-virginica
+[ML, L, ML, ML] -> Iris-virginica
+[ML, L, ML, MS] -> Iris-virginica
+[ML, L, L, MS] -> Iris-virginica
+[MS, L, ML, S] -> Iris-virginica
+[MS, L, ML, MS] -> Iris-virginica
+[ML, L, ML, ML] -> Iris-virginica
+[ML, ML, L, MS] -> Iris-virginica
+[L, L, L, L] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[MS, ML, ML, S] -> Iris-virginica
+[ML, L, L, ML] -> Iris-virginica
+[MS, L, ML, MS] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[ML, ML, ML, MS] -> Iris-virginica
+[ML, L, L, ML] -> Iris-virginica
+[L, ML, L, ML] -> Iris-virginica
+[ML, ML, ML, MS] -> Iris-virginica
+[ML, ML, ML, MS] -> Iris-virginica
+[ML, L, L, MS] -> Iris-virginica
+[L, ML, L, MS] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[L, L, L, L] -> Iris-virginica
+[ML, L, L, MS] -> Iris-virginica
+[ML, ML, ML, MS] -> Iris-virginica
+[ML, ML, L, MS] -> Iris-virginica
+[L, L, L, MS] -> Iris-virginica
+[ML, L, L, ML] -> Iris-virginica
+[ML, ML, L, MS] -> Iris-virginica
+[MS, ML, ML, MS] -> Iris-virginica
+[ML, L, ML, MS] -> Iris-virginica
+[ML, L, L, MS] -> Iris-virginica
+[ML, L, ML, MS] -> Iris-virginica
+[MS, L, ML, MS] -> Iris-virginica
+[ML, L, L, ML] -> Iris-virginica
+[ML, L, L, ML] -> Iris-virginica
+[ML, L, ML, MS] -> Iris-virginica
+[ML, L, ML, S] -> Iris-virginica
+[ML, L, ML, MS] -> Iris-virginica
+[ML, L, ML, ML] -> Iris-virginica
+[MS, ML, ML, MS] -> Iris-virginica
+SepalLength
+  S:
+    SepalWidth
+      S:
+        PetalLength
+          S:
+            Iris-setosa
+          MS:
+            Iris-versicolor
+          L:
+            Iris-versicolor
+          ML:
+            Iris-virginica
+      MS:
+        Iris-setosa
+      L:
+        Iris-setosa
+      ML:
+        Iris-setosa
+  MS:
+    PetalWidth
+      S:
+        Iris-setosa
+      MS:
+        Iris-versicolor
+      L:
+        Iris-virginica
+      ML:
+        Iris-versicolor
+  L:
+    Iris-virginica
+  ML:
+    Iris-virginica
+Correct: 127/150 (84.67)%
+1/0 Loss: 23
